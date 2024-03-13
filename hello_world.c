@@ -17,7 +17,8 @@ int main() {
 
     resultado = num1 + num2;
 
-    printf("A soma dos dois valores é: %d\n", resultado);
+    printf("A soma dos dois valores: %d", resultado);
+    printf("\n");
 
 #ifdef _WIN32
     printf("Pressione qualquer tecla para sair...");
