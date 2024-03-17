@@ -25,12 +25,12 @@
             "cStandard": "c17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "linux-gcc-x64",
-            "compilerPathInCppPropertiesJson": "/usr/bin/g++",
+            "compilerPathInCppPropertiesJson": "/usr/bin/gcc",
             "mergeConfigurations": false,
             "browse": {
                 "path": [
                     "/home/ubuntu/Documents/GitHub/ADS100_Scripts/**",
-                    "${workspaceFolder}"
+                    "/home/ubuntu/Documents/GitHub/ADS100_Scripts"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }
