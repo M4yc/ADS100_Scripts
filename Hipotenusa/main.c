@@ -12,7 +12,7 @@ int main(){
 
     c = sqrt((a*a)+(b*b));
 
-    printf("A hipotenusa é: %f", c);
+    printf("A hipotenusa é: %f\n", c);
 
     return 0;
 }
