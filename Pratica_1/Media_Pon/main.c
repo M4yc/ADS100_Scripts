@@ -19,7 +19,7 @@ int main(){
 
     printf("Informe o 2 Valor: ");
     scanf("%f",&v2);
-    
+
     printf("Informe o 3 Valor: ");
     scanf("%f",&v3);
 
