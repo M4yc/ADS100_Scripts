@@ -1,7 +1,5 @@
 //Programa para Calcular a quantidade de latas de tintas
 
-
-
 #include <stdio.h>
 #include <math.h> //Biblioteca para fazer Calculos
 
