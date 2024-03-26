@@ -2,12 +2,12 @@
 #ifdef _WIN32
 #include <conio.h> // Biblioteca específica do Windows para getch()
 #else
-#include <stdio_ext.h> // Biblioteca específica do Linux para limpar o buffer do teclado
+//#include <stdio_ext.h> // Biblioteca específica do Linux para limpar o buffer do teclado
 #endif
 
 int main(){
     
-    printf("Hello, world");
+    printf("Hello, world\n");
 
     //Codigo para funcionar em linux e em Windows
     //###########################################
@@ -16,7 +16,6 @@ int main(){
     getch(); // Espera o usuário pressionar uma tecla no Windows
     #else
     printf("Pressione Enter para sair...");
-    __fpurge(stdin); // Limpa o buffer do teclado no Linux
     getchar(); // Espera o usuário pressionar Enter no Linux
     #endif
     //##################################################
