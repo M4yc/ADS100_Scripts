@@ -8,7 +8,7 @@
 
 int main()
 {
-    float n1, n2, n3, n4, m;
+    float n1, n2, n3, n4, m; //Declaração de Variavel
     printf("Informe o Primeiro valor: ");
     scanf("%f", &n1);
 
@@ -21,7 +21,7 @@ int main()
     printf("Informe o Quarto valor: ");
     scanf("%f", &n4);
 
-    m = (n1+n2+n3+n4) / 4;
+    m = (n1+n2+n3+n4) / 4; //Calculo de Media
     printf("A media dos valores fornecido: %.2f", m);
 
     //Codigo para funcionar em linux e em Windows
