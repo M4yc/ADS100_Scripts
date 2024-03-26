@@ -29,7 +29,6 @@ int main()
     printf("Valor de C: %.2f\n", c);
     printf("Valor da Quantidade: %.2f\n", quantidade); 
     
-    
     //Codigo para funcionar em linux e em Windows
     //###########################################
     #ifdef _WIN32
@@ -41,6 +40,6 @@ int main()
     getchar(); // Espera o usuário pressionar Enter no Linux
     #endif
     //##################################################
-
+    
     return 0;
 }
