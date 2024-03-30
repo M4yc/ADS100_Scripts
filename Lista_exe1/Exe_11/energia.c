@@ -16,9 +16,11 @@ int main(){
     
     printf("Digite a quantidade de quilowatts consumida: ");
     scanf("%f",&q_watts);
+    
     v_watts = salario / 5;
     valor = v_watts * q_watts;
     valor_desc = valor * 0.15;
+
     printf("O valor por quilowatts é: R$%.2f\n",v_watts);
     printf("O valor Total da fatura: R$%.2f\n",valor);
     printf("O valor Total com desconto: R$%.2f\n",(valor - valor_desc));
