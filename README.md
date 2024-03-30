@@ -16,6 +16,12 @@
 3. Compile o código-fonte usando um compilador C compatível.
 4. Execute o programa compilado.
 
+```bash
+$ cd exercicio1
+$ gcc exercicio1.c -o exercicio1
+$ ./exercicio1
+```
+
 ## 🚀 Estrutura do Repositório
 
 - `/Pratica_x/execicio/main.c`: Descrição do exercício 1.
