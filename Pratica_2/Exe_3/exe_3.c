@@ -13,8 +13,10 @@ int main(){
         printf("Juvenil A\n");
     }else if(idade >= 14 && idade <= 17){
         printf("Juvenil B\n");
-    }else{
+    }else if (idade >= 18){
         printf("Adulto\n");
+    }else{
+        printf("Idade não consta na tabela");
     }
     
     

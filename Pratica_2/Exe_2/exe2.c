@@ -11,7 +11,6 @@ int main(){
         printf("Você pode voltar!\n");
         
         printf("Você pode tirar carteira de habilitação!\n");
-        /* code */
 
     } 
     

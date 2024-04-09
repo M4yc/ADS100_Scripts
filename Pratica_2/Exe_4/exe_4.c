@@ -3,7 +3,7 @@
 
 int main(){
 
-    float a, b, c, x1, x2;
+    float a, b, c, raiz1, raiz2, delta;
     
     printf("Informe o valor de A:");
     scanf("%f",&a);
@@ -14,12 +14,19 @@ int main(){
     printf("Informe o valor de C:");
     scanf("%f",&c);
 
-    x1 = (-b + sqrt(b*b-4*a*c))/ a*2;
-    x2 = (-b - sqrt(b*b-4*a*c))/ a*2;
+    delta = b*b - 4 * a * c;
 
-    printf("x1= %f", x1);
-    printf("x2= %f", x2);
+    if (delta > 0){
+        raiz1 = (-b + sqrt(delta))/ a*2;
+        raiz2 = (-b - sqrt(delta))/ a*2;
 
-    /* ax²+bx+c=0 */
+        printf("As raizes da equacao são:  x1= %.2f  x2= %.2f", raiz1, raiz2);
+    } else if(delta == 0){
+        raiz1 = -b  / (2*a);
+        printf("A equação possui raízes iguais: %.2f\n", raiz1);
+    } else{
+        printf("Não existe");
+    }
+
     return 0;
 }
