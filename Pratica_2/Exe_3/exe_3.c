@@ -16,7 +16,7 @@ int main(){
     }else if (idade >= 18){
         printf("Adulto\n");
     }else{
-        printf("Idade não consta na tabela");
+        printf("Idade nao consta na tabela");
     }
     
     
