@@ -20,12 +20,12 @@ int main(){
         raiz1 = (-b + sqrt(delta))/ a*2;
         raiz2 = (-b - sqrt(delta))/ a*2;
 
-        printf("As raizes da equacao são:  x1= %.2f  x2= %.2f", raiz1, raiz2);
+        printf("As raizes da equacao sao:  x1= %.2f  x2= %.2f", raiz1, raiz2);
     } else if(delta == 0){
         raiz1 = -b  / (2*a);
-        printf("A equação possui raízes iguais: %.2f\n", raiz1);
+        printf("A equação possui raizes iguais: %.2f\n", raiz1);
     } else{
-        printf("Não existe");
+        printf("Nao existe");
     }
 
     return 0;

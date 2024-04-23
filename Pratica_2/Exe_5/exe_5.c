@@ -16,11 +16,11 @@ int main(){
 
     if (a < b + c && b < a + c && c < a + b){
         if (a == b && b == c){
-           printf("O triangulo é equilatero.\n");
+            printf("O triangulo e equilatero.\n");
         } else if (a == b || a == c|| b == c){
-            printf("O triangulo é isoceles\n");
+            printf("O triangulo e isoceles\n");
         } else{
-            printf("O triangulo é escaleno.\n");
+            printf("O triangulo e escaleno.\n");
         }
     } else{
         printf("Nao forma um triangulo.\n");

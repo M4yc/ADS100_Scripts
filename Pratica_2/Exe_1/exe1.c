@@ -8,7 +8,7 @@ int main(){
     idade = 2024 - ano;
 
     if (idade >= 16){
-        printf("Você pode voltar!\n");
+        printf("Você pode votar!\n");
         if (idade >= 18){
             printf("Você pode tirar carteira de habilitação!\n");
         /* code */
