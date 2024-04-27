@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <math.h>
-//#include <locale.h>
+#include <locale.h>
 
 
 int main(){
-    //setlocale(LC ALL);
+    setlocale(LC_ALL, "Portuguese");
+
     int opmenu;
     float resultado, n1, n2;
     
@@ -48,6 +49,7 @@ int main(){
         printf("A raiz quadrada dos numeros digitados é : %.2f\n",resultado);
         break;
     default:
+    printf("Valor Invalido.");
         break;
     }
 }
