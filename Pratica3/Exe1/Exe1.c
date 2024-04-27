@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
+#include <unistd.h>
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
@@ -8,15 +9,30 @@ int main(){
     int opmenu;
     double resultado, n1, n2;
     
-    printf("Digite o numero para fazer as respectivas operações\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potencialização\n6 - Raiz Quadrada\n");
+    printf("Calculadora\n"
+            "=================================\n"
+            "|  1 - Adição (+)             |\n"
+            "|  2 - Subtração (-)          |\n"
+            "|  3 - Multiplicação (x)      |\n"
+            "|  4 - Divisão (÷)            |\n"
+            "|  5 - Potencialização (^)    |\n"
+            "|  6 - Raiz Quadrada (√)      |\n"
+            "=================================\n");
     
+    printf("Digite o numero para fazer as respectivas operações: ");
     scanf("%d",&opmenu);
 
     printf("Informe o Primeiro Valor: ");
     scanf("%lf",&n1);
     printf("Informe o Segundo Valor: ");
     scanf("%lf",&n2);
-    
+
+    printf("Calculando.");
+    sleep(1);
+    printf(".");
+    sleep(1);
+    printf(".\n");
+
     switch (opmenu){
     case 1:
         resultado = n1 + n2;
