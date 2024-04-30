@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    int c;
+
+    for(c=1;c <= 100;c++){
+        printf("Valor de C= %d\n", c);
+    }
+    
+    return 0;
+}
