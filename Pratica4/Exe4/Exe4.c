@@ -6,12 +6,13 @@
 int main(){
     setlocale(LC_ALL, "Portuguese");
 
-    int c;
+    int c=0;
     double resultado, n1, n2;
     char caractere;
 
 
-    for(c=1;c<=10;c++){
+    while(c<10){
+        printf("%d\n",c);
         puts("Calculadora\n"
                 "=================================\n"
                 "|  1 - Adição (+)             |\n"
@@ -24,6 +25,7 @@ int main(){
         
         printf("Digite o numero para fazer as respectivas operações: ");
         scanf("%c",&caractere);
+        
         if (caractere == 'x' || caractere == 'X'){
             printf("Operação encerrada\n");
             break;
@@ -67,6 +69,6 @@ int main(){
         }else {
             printf("Valor Inválido.\n");
         }
-        caractere=0;
+        c+=1;
     }
 }
