@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
-#include <unistd.h>
+
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
@@ -24,7 +24,7 @@ int main(){
                 "=================================\n");
         
         printf("Digite o numero para fazer as respectivas operações: ");
-        scanf("%c",&caractere);
+        scanf(" %c",&caractere);
         
         if (caractere == 'x' || caractere == 'X'){
             printf("Operação encerrada\n");
@@ -36,37 +36,40 @@ int main(){
         printf("Informe o Segundo Valor: ");
         scanf("%lf",&n2);
 
-        if (caractere == '1'){
+        switch (caractere){
+        case '1':
             resultado = n1 + n2;
-            printf("\n");
-            printf("A soma dos números digitados é : %.2lf\n",resultado);
-            printf("\n");
-        } else if(caractere == '2'){
+            printf("\nResultado de %.2lf + %.2lf = %.2lf \n\n",n1,n2,resultado);
+            break;
+        case '2':
             resultado = n1 - n2;
-            printf("\n");
-            printf("A subtração dos números digitados é : %.2lf\n",resultado);
-            printf("\n");
-        } else if(caractere == '3'){
+            printf("\nResultado de %.2lf - %.2lf = %.2lf \n\n", n1, n2, resultado);
+            break;
+        case '3':
             resultado = n1 * n2;
-            printf("\n");
-            printf("A multiplicação dos números digitados é : %.2lf\n",resultado);
-            printf("\n");
-        } else if(caractere == '4'){
-            resultado = n1 / n2;
-            printf("\n");
-            printf("A divisão dos números digitados é : %.2lf\n",resultado);
-            printf("\n");
-        } else if(caractere == '5'){
-            resultado = pow(6, 8);
-            printf("\n");
-            printf("A potenciação dos números digitados é : %.2lf\n",resultado);
-            printf("\n");
-        } else if(caractere == '6'){
-            resultado = sqrt(9); // Raiz quadrada dos números digitados
-            printf("\n");
-            printf("A raiz quadrada dos números digitados é : %.2lf\n",resultado);
-            printf("\n");
-        }else {
+            printf("\nResultado de %.2lf * %.2lf = %.2lf \n\n", n1, n2, resultado);
+            break;
+        case '4':
+            if (n2 != 0){
+                resultado = n1 / n2;
+                printf("\nResultado de %.2lf / %.2lf = %.2lf\n\n", n1, n2, resultado);
+            }else{
+                printf("\nNão da para dividir por 0 \n\n");
+            }
+            break;
+        case '5':
+            resultado = pow(n1, n2);
+            printf("\nResultado de %.2lf ^ %.2lf = %.2lf\n\n", n1, n2, resultado);
+            break;
+        case '6':
+            if (n1 >= 1){
+                resultado = sqrt(n1); 
+                printf("\nResultado de √%.2lf = %.2lf\n\n", n1, resultado);
+            }else{
+                printf("\nNão é possivel calcular raiz quadrada de numero negativo. \n\n"); 
+            }
+            break;
+        default:
             printf("Valor Inválido.\n");
         }
         c+=1;
