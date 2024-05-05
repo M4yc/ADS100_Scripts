@@ -1,8 +1,8 @@
+//Programa que simula uma calculadores simples com FOR
+
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
-
-
 
 int main(){
     setlocale(LC_ALL, "Portuguese_Brazil");
@@ -21,6 +21,7 @@ int main(){
                 "|  4 - Divisão (÷)            |\n"
                 "|  5 - Potencialização (^)    |\n"
                 "|  6 - Raiz Quadrada (√)      |\n"
+                "|  x - Para Encerrar          |\n"
                 "=================================\n");
         
         printf("Digite o numero para fazer as respectivas operações: ");
