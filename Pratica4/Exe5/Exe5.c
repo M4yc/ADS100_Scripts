@@ -1,3 +1,5 @@
+//Programa para contar numeros par e impar utilizando FOR
+
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
@@ -7,6 +9,7 @@ int main(){
 
     int cp, ci, n, c;
 
+    printf("Programa para contar numeros Pares e Impares.\n");
     for(c=1;c <= 10;c++){
         printf("Informe o valor de N: ");
         scanf("%d",&n);
