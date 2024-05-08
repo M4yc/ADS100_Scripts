@@ -8,12 +8,12 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
 
     int num_ped = 1, quant;
-    float total = 0, preco;
+    double total = 0, preco;
 
 
     while(-1){
         
-        printf("Menu de Opções Food & Code:\n");
+        printf("\nMenu de Opções Food & Code:\n");
         printf("[ 1 ] Pizza.\n");
         printf("[ 2 ] Hamburguer.\n");
         printf("[ 3 ] Macarrão.\n");
@@ -25,19 +25,29 @@ int main(){
 
         printf("Informe o numero do pedido: ");
         scanf("%d",&num_ped);
+
         if (num_ped == 0){
             break;
         }
-        printf("Informe o Preço: ");
-        scanf("%f",&preco);
+
+        if (num_ped < 0 || num_ped > 7) {
+            printf("Pedido inválido, Informe um número de pedido válido.\n");
+            continue; 
+        }
+
+        printf("Informe o Preço: ");//Como está em Portugues a localidade tem que usar , nos numeros decimais
+        scanf(" %lf",&preco);
+
         printf("Informe a quantidade: ");
-        scanf("%d",&quant);
+        scanf(" %d",&quant);
 
         total += (quant*preco);
     }
-    printf("\nTotal da compra é: R$%.2f\n",total);
+    printf("\nTotal da compra é: R$ %.2lf\n",total);
     
     system("pause");
     
+    printf("\a");
+
     return 0;
 }
