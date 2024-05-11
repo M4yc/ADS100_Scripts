@@ -3,27 +3,30 @@
 #include <locale.h>
 #include <stdlib.h>
 
+#define e_percent 0.02
+#define U_volt 127
+#define p_resist (1.0/58)
+
+
 int main(){
-    setlocale(LC_ALL, "Portuguese");
 
     printf("Programa para determinar a seção de um condutor de cobre (em mm²)\n");
 
     float secao, P, L, pots;
     
-
     for (int i = 0; i < 3; i++){
-        printf("Informe a potencia em Watt: ");
-        scanf("%f",&P);
+        printf("\nInforme a %d° potencia em Watt: ", i+1);
+        scanf("%f", &P);
 
-        printf("Informe a distancia em metros: ");
-        scanf("%f",&L);
+        printf("\nInforme a %d° distancia em Metros: ", i+1);
+        scanf("%f", &L);
 
-        pots += (P*L); 
+        pots += (P * L); 
     }
 
-    secao = (2*(1/58)*(1/(0.02*(127*127)))*pots);
+    secao = 2 * p_resist * (1 / (e_percent * U_volt * U_volt)) * pots;
 
-    printf("O diametro do fio é: %.2f\n",secao);
+    printf("\nO diametro do fio é: %.2f em mm²\n", secao);
 
     system("pause");
     

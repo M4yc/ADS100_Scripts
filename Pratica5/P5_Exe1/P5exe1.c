@@ -47,6 +47,7 @@ int main(){
     
     system("pause");
     
+    //system("\a");
     printf("\a");
 
     return 0;
