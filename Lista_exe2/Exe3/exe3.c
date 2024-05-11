@@ -13,8 +13,6 @@ int main(){
     printf("Informe o valor da prestação: ");
     scanf("%f", &presta);
 
-
-
     if (presta <= (salario * 0.3)){
         printf(" R$%.2f é 30%% do seu salario.",(salario*0.3));
         printf("Você pode fazer emprestimo\n");
@@ -22,7 +20,6 @@ int main(){
     } else {
         printf(" R$%.2f é 30%% do seu salario.",(salario*0.3));
         printf("Emprestimo negado\n");
-
     }
 
     return 0;
