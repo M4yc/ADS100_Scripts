@@ -14,7 +14,7 @@ int main(){
 
     float secao, P, L, pots;
     
-    for (int i = 0; i < 3; i++){
+    for (int i = 0; i < 10; i++){
         printf("\nInforme a %d° potencia em Watt: ", i+1);
         scanf("%f", &P);
 
