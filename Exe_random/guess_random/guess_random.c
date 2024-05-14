@@ -3,7 +3,6 @@
 #include <stdlib.h> // Biblioteca para gerar numeros aleatorios
 #include <time.h> //Biblioteca de tempo
 
-
 int main(){
     setlocale(LC_ALL, "Portuguese");
 
@@ -15,7 +14,6 @@ int main(){
 
     num = rand() % ((lim_s - lim_i + 1) + lim_i);
     
-    printf("Num = %d",num);
     printf("\nTente adivinhar um numero inteiro de 0 a 100.\n");
     printf("Vamos começar\n");
     while (1){
@@ -43,9 +41,8 @@ int main(){
                     printf("Uma dica é ímpar\n");
                 }
             } else if (tenta == 8){
-                printf("O numero está entre %d e %d\n", num - 4,num + 4);
+                printf("O numero está entre %d e %d\n", num - 3,num + 3);
             }
-
         }
     }
     return 0;
