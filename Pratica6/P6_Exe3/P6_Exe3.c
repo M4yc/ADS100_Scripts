@@ -1,32 +1,41 @@
 #include <stdio.h>
-#include <math.h>
 #include <locale.h>
 #include <stdlib.h>
 
-#define e_percent 0.02
-#define U_volt 127
-#define p_resist (1.0/58)
-
-
 int main(){
 
-    printf("Programa para determinar a seção de um condutor de cobre (em mm²)\n");
+    float nota1, nota2, media = 0, somaG, mediaG = 0 ;
+    int tA = 0, tE = 0, tR = 0;
+    printf("Para Calculo de Media geral e Media do Aluno.");
 
-    float secao, P, L, pots;
-    
-    for (int i = 0; i < 10; i++){
-        printf("\nInforme a %d° potencia em Watt: ", i+1);
-        scanf("%f", &P);
+    for (int i = 0; i < 6; i++)
+    {
+        printf("\nInforme a Primeira nota do aluno %d: ",i+1);
+        scanf("%f",&nota1);
+        printf("\nInforme a Segunda nota do aluno %d: ",i+1);
+        scanf("%f",&nota2);
+        media= (nota1+nota2)/2;
+        printf("\nSua media foi: %.1f", media);
 
-        printf("\nInforme a %d° distancia em Metros: ", i+1);
-        scanf("%f", &L);
-
-        pots += (P * L); 
+        if(media < 3){
+            printf("\nReprovado");
+            tR += 1;
+        }else if (media >= 3 && media < 7 ){
+            printf("\nExame");
+            tE += 1;
+        }else if (media >= 7){
+            printf("\nAprovado");
+            tA += 1;
+        }
+        somaG += media;
     }
 
-    secao = 2 * p_resist * (1 / (e_percent * U_volt * U_volt)) * pots;
+    mediaG = somaG / 6;
 
-    printf("\nO diametro do fio é: %.2f em mm²\n", secao);
+    printf("\nAlunos Aprovados: %d",tA);
+    printf("\nAlunos de Exame: %d", tE);
+    printf("\nAlunos reprovados: %d", tR);
+    printf("\nA media geral da turma foi %.1f\n",mediaG);
 
     system("pause");
     
