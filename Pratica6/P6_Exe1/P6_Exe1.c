@@ -1,3 +1,13 @@
+/*
+ * File Name: P6_Exe1.c
+ * Developer: Maycon, Luslene
+ * Creation Date: 20/05/2024
+ * Description: Programa verificar o Digito de uma conta Bancaria sem usar estruturas de condições ou repetições.
+ * Version: 1.0
+ * Last Modification: 22/05/2024
+ * Modified by: Maycon, Luslene
+ */
+
 #include <stdio.h>
 #include <locale.h>
 

@@ -1,3 +1,13 @@
+/*
+ * File Name: P6_Exe3.c
+ * Developer: Maycon, Luslene
+ * Creation Date: 20/05/2024
+ * Description: Programa para calcular a media de cada aluno e depois a media geral da sala
+ * Version: 1.0
+ * Last Modification: 22/05/2024
+ * Modified by: Maycon, Luslene
+ */
+
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
