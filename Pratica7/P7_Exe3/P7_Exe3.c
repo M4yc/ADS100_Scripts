@@ -2,7 +2,7 @@
  * File Name: P7_Exe1.c
  * Developer: Maycon
  * Creation Date: 27/05/2024
- * Description: Programa para calcular a media de cada aluno e depois a media geral da sala
+ * Description: Programa para ler valores para um vetor A e B e fazer a soma dos vetores em R e mostrar depois em outro FOR todos os valores
  * Version: 1.0
  * Last Modification: 27/05/2024
  * Modified by: Maycon
