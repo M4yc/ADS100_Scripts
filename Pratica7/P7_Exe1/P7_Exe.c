@@ -1,10 +1,10 @@
 /*
- * File Name: P7_Exe1.c
+ * File Name: P7_Exe.c
  * Developer: Maycon
  * Creation Date: 27/05/2024
- * Description: Programa para adicionar 0 ou 1 em um vetor de 100 posições
+ * Description: Programa para adicionar 1 na posição impar e 0 na posição par.
  * Version: 1.0
- * Last Modification: 27/05/2024
+ * Last Modification: 02/06/2024
  * Modified by: Maycon
 */
 
@@ -25,8 +25,9 @@ int main(){
             a[i] = 0;
         } 
     }
+    //Print a mais para saber se está funcionando da maneira correta.
     for ( i = 0; i < 100; i++){
-        printf("\n Valor: %d \n Pos: %d", a[i], i);
+        printf("\n Pos: %d \n Valor: %d \n", i, a[i]);
     }
     
     printf("Fim");

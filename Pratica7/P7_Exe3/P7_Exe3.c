@@ -1,10 +1,10 @@
 /*
- * File Name: P7_Exe1.c
+ * File Name: P7_Exe3.c
  * Developer: Maycon
  * Creation Date: 27/05/2024
  * Description: Programa para ler valores para um vetor A e B e fazer a soma dos vetores em R e mostrar depois em outro FOR todos os valores
  * Version: 1.0
- * Last Modification: 27/05/2024
+ * Last Modification: 02/06/2024
  * Modified by: Maycon
 */
 
@@ -27,9 +27,10 @@ int main(){
     for ( int x = 0; x < 5; x++){
         printf("\n VetR[%d] = %d",x, VETR[x]);
     }
+
+    printf("\n");
     
-    
-    system("\npause");
+    system("pause");
     return 0;
 
 }

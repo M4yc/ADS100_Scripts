@@ -1,10 +1,10 @@
 /*
- * File Name: P7_Exe1.c
+ * File Name: P7_Exe4.c
  * Developer: Maycon
  * Creation Date: 27/05/2024
- * Description: Programa para criar um vetor 3 intercalando dois vetores 
+ * Description: Programa para criar 2 vetores  e intercalar os valores deles em um vetor 3
  * Version: 1.0
- * Last Modification: 27/05/2024
+ * Last Modification: 02/06/2024
  * Modified by: Maycon
 */
 
@@ -29,12 +29,11 @@ int main(){
         
     }
 
-for (int i = 0; i < 20; i++)
-    {
-    printf("%d ",VET3[i]);
-}
-
-    system("\npause");
+    for (int i = 0; i < 20; i++){
+        printf("%d ",VET3[i]);
+    }
+    printf("\n");
+    system("pause");
     return 0;
 
 }
