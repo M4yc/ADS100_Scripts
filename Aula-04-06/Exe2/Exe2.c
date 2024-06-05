@@ -20,7 +20,7 @@ int main(){
 
     for(int i = 0; i < 5; i++){
         printf("Digite uma string: ");
-        fgets(string, sizeof(string), stdin);
+        fgets(strings, sizeof(strings), stdin);
     }
     
 
