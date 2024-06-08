@@ -25,8 +25,8 @@ int main(){
     
     for (int i = 0; i < 10-1; i++){
         for (int j = i + 1; j < 10; j++){
-            if (vetor[i] < vetor[j]){
-                valor = vetor[i];
+            if (vetorOrd[i] < vetorOrd[j]){
+                valor = vetorOrd[i];
                 vetorOrd[i] = vetorOrd[j];
                 vetorOrd[j] = valor;
             }
