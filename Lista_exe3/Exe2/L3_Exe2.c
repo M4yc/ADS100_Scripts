@@ -16,6 +16,7 @@
 #define Taxa_Serv_10 8
 
 int main(){
+    setlocale(LC_ALL, "pt_BR.UTF-8"); 
 
     float ValorTot = 0;
     char Nome[100];
@@ -25,7 +26,7 @@ int main(){
     
     while (1){
         printf("\nInforme o nome do Cliente: ");
-        scanf(" %s",&Nome);
+        scanf(" %s",Nome);
         printf("\nDigite o numero da conta (0 para sair): ");
         scanf("%d",&Num_Conta);
         if (Num_Conta == 0){
