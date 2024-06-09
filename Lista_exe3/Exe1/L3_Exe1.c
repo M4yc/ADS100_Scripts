@@ -1,9 +1,9 @@
 /*
  * File Name: P8_Exe1.c
  * Developer: Maycon
- * Creation Date: 03/06/2024
+ * Creation Date: 08/06/2024
  * Description: Programa para receber dez notas de cada aluno de uma turma de 20 alunos calcular e imprimir a media de cada aluno a media da turma e Percentual de media acima de 5
- * Last Modification: 03/06/2024
+ * Last Modification: 09/06/2024
  * Modified by: Maycon
 */
 
