@@ -1,9 +1,9 @@
 /*
  * File Name: P8_Exe2.c
  * Developer: Maycon
- * Creation Date: 03/06/2024
- * Description: ?????
- * Last Modification: 03/06/2024
+ * Creation Date: 08/06/2024
+ * Description: Programa calculara o valor da estadia de clientes e infomar no fianl o valor recebido pela pousada
+ * Last Modification: 09/06/2024
  * Modified by: Maycon
 */
 
@@ -23,7 +23,6 @@ int main(){
     int Dias;
     float VarlorCliente = 0;
     
-
     while (1){
         printf("\nInforme o nome do Cliente: ");
         scanf(" %s",&Nome);
@@ -40,13 +39,14 @@ int main(){
         }else if (Dias >= 10){
             VarlorCliente = Dias * Diaria + Taxa_Serv_10;
         }
-        
-        printf("Cliente: %s, Conta: %d, Total: R$%.2f ", Nome, Num_Conta, VarlorCliente);
+        printf("============================================\n");
+        printf("Cliente: %s, Conta: %d, Total: R$%.2f \n", Nome, Num_Conta, VarlorCliente);
+        printf("============================================\n");
 
         ValorTot += VarlorCliente; 
     }
     
-    printf("\n========== Nota Final =============");
-    printf("\nO valor total da pousada foi: R$%.2f", ValorTot);
+    printf("\n============ Nota Final ===============");
+    printf("\nO valor total ganho pela pousada foi: R$%.2f", ValorTot);
     return 0;
 }
