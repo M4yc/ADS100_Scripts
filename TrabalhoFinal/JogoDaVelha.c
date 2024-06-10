@@ -17,6 +17,12 @@ void resetGame(char jogo[3][3]);
 
 void printGame(char jogo[3][3]);
 
+void CheckVitor(char jogo[3][3]);
+
+
+int jogadorDaVez = 1;
+int jogadas = 0;
+
 int main(){
 
     setlocale(LC_ALL, "Portuguese");
@@ -27,8 +33,10 @@ int main(){
                         {'.','.','.'},
                         {'.','.','.'}};
     
+
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
+            printGame(jogo);
             printf("Informe o valor para a posição [%d , %d] (X ou O): ", i, j);
             scanf(" %c",&input);
             input = toupper(input);
@@ -63,8 +71,14 @@ void resetGame(char jogo[3][3]){
         for (int j = 0; j < 3; j++){
             jogo[i][j] = '.';
         }
-        
     }
+}
+
+void CheckVitor(char jogo[3][3]){
+    if (jogo[0][0] == 'X' && jogo[0][1] == 'X' && jogo[0][2] == 'X'){
+        printf("Vitoria jogador 1");
+    }
+    
 }
 
 void printGame(char jogo[3][3]){
