@@ -1,6 +1,6 @@
 /*
  * File Name: JogoDaVelha.c
- * Developer: Maycon
+ * Developer: Maycon, Luiz Felipe, Luslene, Vanessa, Tais
  * Creation Date: 04/06/2024
  * Description: Jogo da Velha em C
  * Last Modification: 05/06/2024
@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include <ctype.h> // Lib para colocar cor no terminal
 
 /*  Funções do Game */
 void resetGame(char jogo[3][3]);
@@ -20,6 +20,9 @@ void printGame(char jogo[3][3]);
 int checkVit(char jogo[3][3]);
 
 void printColored(char c);
+
+void PrintIntro(); 
+
 
 int main(){
 
@@ -34,6 +37,8 @@ int main(){
     
     int Lin,Col;
 
+    PrintIntro();
+
     while (jogadas <= 9){
         printGame(jogo);
         printf("Jogador %c, digite a linha e a coluna (0, 1, 2): ", Jogador);
@@ -47,7 +52,6 @@ int main(){
             continue;
         }
         
-
         jogo[Lin][Col] = Jogador;
         jogadas += 1;
 
@@ -63,14 +67,32 @@ int main(){
             Jogador = 'X';
         }
 
+        if (jogadas == 9 && checkVit(jogo) == 0){
+            printGame(jogo);
+            printf("\nO jogo terminou em empate!\n");
+            break;
+        }
+        
         // Alterna o jogador
         //Jogador = (Jogador == 'X') ? 'O' : 'X';
     }
-    printGame(jogo);
-    printf("O jogo terminou em empate!\n");
-    
     return 0;
 }
+
+void PrintIntro(){
+    printf("\n========== Jogo da Velha ============\n");
+    printf("*Instruções*\n");
+    printf("Jogador 1 == X\n");
+    printf("Jogador 2 == O\n");
+    printf("Para inserir a posição da jogada digite a linha espaço e a coluna (1 0).\n");
+    printf("Posições: \n");
+    printf("| [0 0] | [0 1] | [0 2] |\n");
+    printf("-------------------------\n");
+    printf("| [1 0] | [1 1] | [1 2] |\n");
+    printf("-------------------------\n");
+    printf("| [2 0] | [2 1] | [2 2] |\n");
+}
+
 
 void printColored(char c) {
     if (c == 'X') {
@@ -146,7 +168,7 @@ int checkVit(char jogo[3][3]){
 }
 
 void printGame(char jogo[3][3]){
-    printf("Tabuleiro:\n");
+    printf("\nTabuleiro:\n");
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
             printf("| ");
