@@ -47,10 +47,10 @@ int main(){
         scanf("%d %d",&Lin,&Col);
         
         //Abaixo Deve ter a vericação dos valores inseridos e se são validos
-        if (Lin >= 3 || Lin < 0 || Col >= 3 || Col < 0 ){
+        if (?????){
             printf("Valores Invalidos! Tente novamente.\n");
             continue;
-        }else if (Jogo[Lin][Col] != '.'){
+        }else if (???????){
             printf("Posição ja ocupada\n");
             continue;
         }
