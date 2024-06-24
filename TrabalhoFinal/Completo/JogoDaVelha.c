@@ -3,14 +3,13 @@
  * Developer: Maycon, Luiz Felipe, Luslene, Vanessa, Tais
  * Creation Date: 04/06/2024
  * Description: Jogo da Velha em C
- * Last Modification: 14/06/2024
+ * Last Modification: 23/06/2024
  * Version: 1.0
 */
 
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
-#include <ctype.h> // Lib para colocar cor no terminal
 
 /*  Funções do Game */
 void ResetGame(char Jogo[3][3]);
@@ -18,8 +17,6 @@ void ResetGame(char Jogo[3][3]);
 void PrintGame(char Jogo[3][3]);
 
 int CheckVit(char Jogo[3][3]);
-
-void PrintColored(char c);
 
 void PrintIntro(); 
 
@@ -56,18 +53,21 @@ int main(){
         Jogo[Lin][Col] = Jogador;
         Jogadas += 1;
 
+        //Checar a vitoria
         if (CheckVit(Jogo)){
             PrintGame(Jogo);
             printf("Jogador %c venceu!\n", Jogador);
             break;
         }
 
+        //Troca de Jogador
         if (Jogador == 'X'){
             Jogador = 'O';
         }else if (Jogador == 'O'){
             Jogador = 'X';
         }
 
+        //Checar o empate
         if (Jogadas == 9 && CheckVit(Jogo) == 0){
             PrintGame(Jogo);
             printf("\nO Jogo terminou em empate!\n");
@@ -93,6 +93,7 @@ int main(){
     return 0;
 }
 
+//Função para printar intro
 void PrintIntro(){
     printf("\n========== Jogo da Velha ============\n");
     printf("*Instruções*\n");
@@ -107,17 +108,7 @@ void PrintIntro(){
     printf("| [2 0] | [2 1] | [2 2] |\n");
 }
 
-
-void PrintColored(char c) {
-    if (c == 'X') {
-        printf("\033[1;31m%c\033[0m", c); // Vermelho
-    } else if (c == 'O') {
-        printf("\033[1;32m%c\033[0m", c); // Verde
-    } else {
-        printf("%c", c);
-    }
-}
-
+//Função Para Resetar o Game
 void ResetGame(char Jogo[3][3]){
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
@@ -126,6 +117,7 @@ void ResetGame(char Jogo[3][3]){
     }
 }
 
+//Função Para checar a vitoria
 int CheckVit(char Jogo[3][3]){
     if (Jogo[0][0] == 'X' && Jogo[0][1] == 'X' && Jogo[0][2] == 'X'){ // Linha 1
         printf("\nVitoria jogador X ");
@@ -181,12 +173,13 @@ int CheckVit(char Jogo[3][3]){
     return 0;
 }
 
+//Print Game
 void PrintGame(char Jogo[3][3]){
     printf("\nTabuleiro:\n");
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
             printf("| ");
-            PrintColored(Jogo[i][j]);
+            printf("%c",Jogo[i][j]);
             printf(" ");
         }
         printf("|\n");
